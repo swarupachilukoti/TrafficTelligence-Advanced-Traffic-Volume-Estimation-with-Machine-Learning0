@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Volume Estimation</title>
+    <style>
+        body {
+            background-image: url('https://cdn.vox-cdn.com/thumbor/voARJfEKvTp6iMSzW3ExPn06TD');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <center><h1>Traffic Volume Estimation</h1></center>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict') }}" method="post">
+            <h1>Please enter the following details</h1>
+
+            <label for="holiday">Holiday:</label>
+            <select id="holiday" name="holiday">
+                <option value="2">No Holiday</option>
+                <option value="1">Columbus Day</option>
+                <option value="0">Veterans Day</option>
+                <option value="3">Thanksgiving Day</option>
+                <option value="4">Christmas Day</option>
+                <option value="5">New Years Day</option>
+                <option value="6">Washingtons Birthday</option>
+                <option value="7">Memorial Day</option>
+                <option value="8">Independence Day</option>
+            </select>
+        </form>
+    </div>
+</body>
+</html>
